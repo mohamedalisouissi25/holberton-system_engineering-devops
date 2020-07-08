@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#a Bash script that displays Holberton School 10 times.
+
+d=1
+
+while [ $d -le 10 ]
+do
+	echo "Holberton School"
+	d=$((d + 1))
+done
