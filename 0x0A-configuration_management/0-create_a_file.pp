@@ -1,4 +1,4 @@
-# create a file in /tmp with specific requirements
+# with puppet we create a file in /tmp with specific requirements
 
 file { 'holberton':
   path    => '/tmp/holberton',
