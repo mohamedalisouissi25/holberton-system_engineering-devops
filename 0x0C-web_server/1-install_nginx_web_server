@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
-
 # a script that install nginx
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install nginx
-sudo service nginx start
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-
-
+sudo  apt-get -y update
+sudo  apt-get -y install nginx
+sudo  echo "Holberton School" | sudo tee /var/www/html/index.html
+sudo  service nginx start
