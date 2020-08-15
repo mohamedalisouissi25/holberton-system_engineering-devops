@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# a script that make your fix short and sweet.
+
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
