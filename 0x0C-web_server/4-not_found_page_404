@@ -2,8 +2,8 @@
 #nginx reconfiguration
 
 sudo apt-get -y update
+sudo apt-get -y upgrade
 sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/error_404.html
 config="\\\terror_page 404 /error_404.html;"
