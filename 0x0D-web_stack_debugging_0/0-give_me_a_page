@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script for apache
 
 sudo service apache2 start
 
