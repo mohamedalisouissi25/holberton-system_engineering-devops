@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # nginx reconfiguration
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-chmod u+x /var/www/html/index.nginx-debian.html
-sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install nginx -y
 sudo service nginx start
+sudo sed -n -i 'p;19a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-enabled/default
+sudo service nginx restart
