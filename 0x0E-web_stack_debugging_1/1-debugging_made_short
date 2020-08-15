@@ -3,5 +3,5 @@
 
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-rm /run/nginx.pid
+kill "$(pgrep 'nginx' | head -1)"
 
