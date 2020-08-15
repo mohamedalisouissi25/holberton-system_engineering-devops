@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#nginx reconfiguration
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/error_404.html
+config="\\\terror_page 404 /error_404.html;"
+configloc="\n\tlocation = /error_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}"
+sudo sed -i "19a $config$configloc" /etc/nginx/sites-enabled/default
+sudo service nginx start
