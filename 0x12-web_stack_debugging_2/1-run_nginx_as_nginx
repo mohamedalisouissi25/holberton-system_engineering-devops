@@ -2,7 +2,7 @@
 # Nginx is running as the nginx user
 
 pkill apache2
-chmod 744 /etc/nginx/nginx.conf
+sudo chmod 744 /etc/nginx/nginx.conf
 sed -i '2i user nginx;' /etc/nginx/nginx.conf
 sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
 sudo -u nginx -c 'service nginx start'
