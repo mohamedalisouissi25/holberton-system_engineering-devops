@@ -7,7 +7,7 @@
 #   ufw-before-output
 #   ufw-before-forward
 #
-# 8080 to 80 port
+# Port 8080 to 80
 *nat
 :PREROUTING ACCEPT [0:0]
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
