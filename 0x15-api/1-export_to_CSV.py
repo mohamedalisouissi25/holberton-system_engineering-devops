@@ -18,7 +18,7 @@ if __name__ == '__main__':
     # csv
     with open('{}.csv'.format(_id), 'w') as csv_file:
         for i in data:
-            csv_file.write("\"{}\", \"{}\", \"{}\", \"{}\"\n".format(
+            csv_file.write("\"{}\",\"{}\",\"{}\",\"{}\"\n".format(
                                                             _id,
                                                             name,
                                                             i.get("completed"),
